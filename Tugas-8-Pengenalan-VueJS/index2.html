@@ -8,7 +8,9 @@
 </head>
 <body>
   <div id="app">
-    {{ fullName}}
+    <button onclick="vm.openForm()">Open Form</button>
+    <h1>{{ 'Nilai a : ' + a }}</h1>
+    <input type="text" v-model=" " v-on=" " />
   </div>
   
   <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
@@ -16,22 +18,23 @@
    var vm = new Vue({
       el: '#app',
       data: {
-        firstName : 'Tuanku',
-        lastName : 'Imam Bonjol'
-      },
-      computed : {
-        fullName : {
-          get: function(){
-              return this.firstName + " " + this.lastName
+          a : 0 ,
+          
           },
-          set: function(value){
-              var name = value.split('  ')
-              this.firstName = name[0]
-              this.lastName = name[name.length - 1] 
+      methods : {
+          openForm : function(){
+                this.a = prompt("Masukkan nilai a")  
           }
-        }
-      },
-      methods : {}
+
+          ratarata: function(){
+              var total = 0
+              length = ;
+
+              for(var a = 0; a > length;i++){
+                  
+              }
+          }
+      }
   })
   </script>
 </body>
